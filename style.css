@@ -146,11 +146,17 @@ header{
     .site-paragraph{
         font-size: 1em;
     }
+
+    .portfolio h2{
+        padding: 0;
+    }
+
+    
     .portfolio .grid{
         grid-template-columns: repeat(1, 234px);
         align-content: center;
         justify-content: center;
-        height: calc(103vh - -19em - 49px);
+        height: calc(120vh - -19em - 49px);
     }
 
     .portfolio figure {
@@ -160,7 +166,7 @@ header{
     .img-portfolio {
         height: 180px;
         width: 100%;
-        object-fit: contain;
+        object-fit: fill;
         object-position: left bottom;
         transition: transform 500ms;
     }
@@ -208,7 +214,7 @@ header{
         grid-template-columns: repeat(2, 260px);
         align-content: center;
         justify-content: center;
-        height: calc(100vh - 8em - 48px);
+        height: calc(80vh - 10em - 45px);
     }
 
     .portfolio figure {
