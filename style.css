@@ -151,7 +151,7 @@ header{
         padding: 0;
     }
 
-    
+
     .portfolio .grid{
         grid-template-columns: repeat(1, 234px);
         align-content: center;
@@ -224,7 +224,7 @@ header{
     .img-portfolio {
         height: 180px;
         width: 100%;
-        object-fit: contain;
+        object-fit: fill;
         object-position: left bottom;
         transition: transform 500ms;
     }
