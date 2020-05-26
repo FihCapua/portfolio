@@ -214,7 +214,7 @@ header{
         grid-template-columns: repeat(2, 260px);
         align-content: center;
         justify-content: center;
-        height: calc(80vh - 10em - 45px);
+        height: calc(98vh - 8em - 45px);
     }
 
     .portfolio figure {
