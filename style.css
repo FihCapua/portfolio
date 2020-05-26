@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    font-family: 'DM Mono';
+    height: 100vh;
+    max-width: 1500px;
+}  
+
+.fundo{
+    background-image: url("imgs/fundo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    background-color: #050819;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    padding: 15px;
+    z-index: 1;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    color: #ba5ae0;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    font-weight: bold;
+}
+
+.titles{
+    background-color: #0b092e;
+    opacity: 0.9;
+    border: 3px dashed #ba60f3;
+    padding: 45px;
+}
+
+.site-title,
+.site-subtitle{
+    font-size: 1.8em;
+    text-align: center;
+    color: #dd5fff;
+    font-weight: 600;
+}
+
+.site-subtitle{
+    font-size: 1.3em;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.site-paragraph{
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 25px;
+    letter-spacing: 0.7px;
+}
+
+.portfolio{
+    background-color: #0b092e;
+    padding: 35px 0;
+}
+
+.portfolio h2{
+    color: #dd5fff;
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 600;
+    padding: 1.5em 0;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+.text-portfolio{
+    color: #050819;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.grid-contato{
+    background-color: #000;
+    color: #fff;
+    padding: 35px;
+    text-align: center;
+}
+
+.grid-contato h2{
+    margin-bottom: 10px;
+}
+
+.icon-git,
+.icon-linkedin,
+.icon-behance {
+    width: 30px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 15px;
+    transition: transform 500ms;
+}
+
+.icon-git:hover,
+.icon-linkedin:hover,
+.icon-behance:hover{
+    transform: scale(1.2);
+}
+
+/* QUERYS */
+@media (max-width: 500px){
+    .titles{
+        padding: 30px;
+    }
+    .site-title{
+        font-size: 1.8em;
+    }
+    .site-subtitle{
+        font-size: 1.3em;
+    }
+    .site-paragraph{
+        font-size: 1em;
+    }
+    .portfolio .grid{
+        grid-template-columns: repeat(1, 234px);
+        align-content: center;
+        justify-content: center;
+        height: calc(103vh - -19em - 49px);
+    }
+
+    .portfolio figure {
+        text-align: center;
+    }
+      
+    .img-portfolio {
+        height: 180px;
+        width: 100%;
+        object-fit: contain;
+        object-position: left bottom;
+        transition: transform 500ms;
+    }
+
+    .flip-card {
+        height: 180px;
+        perspective: 1000px;
+    }
+
+    .card {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 3s;
+    }
+      
+    .flip-card:hover .card {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        backface-visibility: hidden;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .card-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        height: 180px;
+        width: 100%;
+        transform: rotateY(180deg);
+        color: #000;
+        text-align: center;
+    }
+    
+}
+
+@media (min-width: 768px){
+    .portfolio .grid{
+        grid-template-columns: repeat(2, 260px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 8em - 48px);
+    }
+
+    .portfolio figure {
+        text-align: center;
+    }
+      
+    .img-portfolio {
+        height: 180px;
+        width: 100%;
+        object-fit: contain;
+        object-position: left bottom;
+        transition: transform 500ms;
+    }
+
+    .flip-card {
+        height: 180px;
+        perspective: 1000px;
+    }
+
+    .card {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 3s;
+    }
+      
+    .flip-card:hover .card {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        backface-visibility: hidden;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .card-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        height: 180px;
+        width: 100%;
+        transform: rotateY(180deg);
+        color: #000;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px){
+    .portfolio .grid{
+        grid-template-columns: repeat(4, 230px);
+    }
+}
+
+@media (min-width: 1440px){
+    .portfolio .grid{
+        grid-template-columns: repeat(4, 270px);
+    }
+}
